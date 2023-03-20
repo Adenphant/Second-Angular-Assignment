@@ -5,16 +5,15 @@ import { Component } from "@angular/core";
     templateUrl: './username.component.html',
     styleUrls: ['./username.component.css']
 })
-
 export class UsernameComponent {
-    username: '';
+    username = '';
     usernameExists = false;
-    
     
     constructor(){
         
     }
-    onUpdateUsername(){
+    onUpdateUsername(newUsername: string){
+        this.username = newUsername;
         if(this.username != ''){
             this.usernameExists = true;
         }
@@ -24,4 +23,4 @@ export class UsernameComponent {
         this.username = '';
         this.usernameExists = false;
     }
-}
+} 

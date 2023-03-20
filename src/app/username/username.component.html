@@ -1,9 +1,14 @@
 <h3>Test</h3>
 <p>Why did this not work?</p>
+<!-- <input 
+    type="text"
+    class="form-control"
+    [(ngModel)]="username"> -->
 <input 
     type="text"
     class="form-control"
-    [(ngModel)]="username">
+    [ngModel]="username"
+    (ngModelChange)="onUpdateUsername($event)">
 <p>Your username is: {{ username }}</p>
 <button
 class="btn btn-primary"
